@@ -1,13 +1,12 @@
 package advent2024
 
-import advent2024.Resources.resourceAsListOfString
 import advent2024.Resources.resourceAsText
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
-@DisplayName("Day 2")
+@DisplayName("Day 3")
 class Day03Test {
 
     // Arrange

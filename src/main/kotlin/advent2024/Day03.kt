@@ -1,8 +1,8 @@
 package advent2024
 
 /**
- * Advent of Code 2024, Day 1 - Historian Hysteria
- * Problem Description: http://adventofcode.com/2024/day/1
+ * Advent of Code 2024, Day 3 - Mull It Over
+ * Problem Description: http://adventofcode.com/2024/day/3
  */
 class Day03(private val input: String) {
 
