@@ -15,23 +15,32 @@
  */
 
 plugins {
-    kotlin("jvm") version "2.1.0"
+	kotlin("jvm") version "2.1.0"
 }
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-    testImplementation("org.assertj:assertj-core:3.24.2") {
-        because("I prefer AssertJ's fluid assertions over JUnit or Hamcrest")
-    }
+	testImplementation(kotlin("test"))
+	testImplementation("org.assertj:assertj-core:3.26.3") {
+		because("I prefer AssertJ's fluid assertions over JUnit or Hamcrest")
+	}
 }
 
 tasks.test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 }
+
+testing {
+	suites {
+		val test by getting(JvmTestSuite::class) {
+			useJUnitJupiter("5.11.3")
+		}
+	}
+}
+
 kotlin {
-    jvmToolchain(21)
+	jvmToolchain(21)
 }
