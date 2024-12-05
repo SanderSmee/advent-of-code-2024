@@ -1,12 +1,12 @@
 package advent2024
 
 /**
- * Advent of Code 2024, Day 4 -
+ * Advent of Code 2024, Day 4 - Ceres Search
  * Problem Description: http://adventofcode.com/2024/day/4
  */
 class Day04(input: List<String>) {
 
-	val matrix = parse(input)
+	private val matrix = parse(input)
 
 	fun solvePart1(): Int {
 		val xmas = arrayOf('M','A','S')
@@ -59,10 +59,9 @@ class Day04(input: List<String>) {
 	}
 
 	private fun parse(input: List<String>): Array<CharArray> {
-
 		return input.map { line -> line.toCharArray() }.toTypedArray()
-
 	}
+
 }
 
 sealed interface Direction {
