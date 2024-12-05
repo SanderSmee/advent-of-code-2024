@@ -79,7 +79,7 @@ class Day05Test {
             val answer = Day05(resourceAsListOfString("day05.txt")).solvePart2()
 
             // Assert
-            assertThat(answer).isEqualTo(-1)
+            assertThat(answer).isEqualTo(6179)
         }
     }
 }
