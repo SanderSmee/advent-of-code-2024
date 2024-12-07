@@ -23,6 +23,8 @@ repositories {
 }
 
 dependencies {
+	implementation("com.github.shiguruikai:combinatoricskt:1.6.0") // https://github.com/shiguruikai/combinatoricskt
+
 	testImplementation(kotlin("test"))
 	testImplementation("org.assertj:assertj-core:3.26.3") {
 		because("I prefer AssertJ's fluid assertions over JUnit or Hamcrest")
