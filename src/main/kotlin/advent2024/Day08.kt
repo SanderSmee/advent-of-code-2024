@@ -11,23 +11,17 @@ class Day08(private val input: List<String>) {
 
 	fun solvePart1(): Int = parse(input)
 		.findSameAntenna()
-		.asSequence()
-		.flatMap { (_, p) ->
-			p.combinations(2)
-				.map { it.antinodes() }
-		}
-		.flatten()
+		.values
+		.flatMap { p -> p.combinations(2) }
+		.flatMap { it.antinodes() }
 		.toSet()
 		.count()
 
 	fun solvePart2(): Int = parse(input)
 		.findSameAntenna()
-		.asSequence()
-		.flatMap { (_, p) ->
-			p.combinations(2)
-				.map { it.resonantAntinodes() }
-		}
-		.flatten()
+		.values
+		.flatMap { p -> p.combinations(2) }
+		.flatMap { it.resonantAntinodes() }
 		.toSet()
 		.count()
 
